@@ -1,6 +1,6 @@
 async function getUsers() {
     try {
-        const response = await fetch('https://api.hacienda.go.cr/fe/ae?identificacion=207360415', {
+        const response = await fetch("http://localhost:3000/users", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -19,17 +19,17 @@ async function getUsers() {
     }
 }
 
-export { getUsers };
+
 
 //////////LLAMADO POST//////////
 
-async function postUsers(nombre,apellido,edad) {
+async function postUsers(nombre,email) {
     try {
      
         const userData = { 
             nombre,
-            apellido,
-            edad
+            email
+    
         
         };
 
@@ -53,7 +53,7 @@ async function postUsers(nombre,apellido,edad) {
     }
 }
 
-export{postUsers}
+
 
 //////////////LLAMADO UPDATE/////////////
 
@@ -89,7 +89,7 @@ async function updateUsers(nombre,apellido,edad,id)
     }
 }
 
-export{updateUsers}
+
 
 
 
@@ -116,4 +116,4 @@ async function deleteUser(id) {
     }
 }
 
-export { deleteUser };
+export default { deleteUser,postUsers,updateUsers,getUsers };

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-
 import { Link } from 'react-router-dom'
-
 import llamados from '../services/llamados'
 
-import Swal from 'sweetAlert2'
-//COMENTARIO
+import Swal from 'sweetalert2';
+
+import '../styles/registro.css';
+
 function FormRegister() {
 
     const [nombreUsuario, SetNombreUsuario]=useState()
@@ -20,7 +20,7 @@ function FormRegister() {
     }
 
     function enviar() {
-        llamados.PostUsers(nombreUsuario, emailUsuario)
+        llamados.postUsers(nombreUsuario, emailUsuario)
         mostrarVentana()
     }
     //sweetAlert
@@ -31,17 +31,27 @@ function FormRegister() {
             icon:'Success',
             confirmButtonText: 'Aceptar'
         });
+        
+        SetNombreUsuario("")
+        SetEmailUsuario("")
     };
 
   return (
-    <div>
+    <div className='datos'>
+        <h3>Registro</h3>
         <br />
         <label htmlFor="">Nombre</label><br />
-        <input value={nombreUsuario} onChange={nombre} type="text" /><br />
+        <input className= "redondo"value={nombreUsuario} onChange={nombre} type="text" /><br />
+        <br />
         <label htmlFor="">Email</label><br />
-        <input value={emailUsuario} onChange={email} type="text" /><br />
-        <button onClick={enviar}>Enviar</button>
-        <p>Pagina principal <Link to="/Principal">Home</Link></p>
+        <input className= "redondo" value={emailUsuario} onChange={email} type="text" /><br />
+        <br />
+        <button id="boton5" type='submit' onClick={enviar}>Enviar</button><br />
+        <br />
+        <div id="col">
+        <p>Pagina principal <Link to="/">Home</Link></p>
+        </div>
+        
     </div>
   )
 }

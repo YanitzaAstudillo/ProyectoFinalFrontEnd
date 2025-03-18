@@ -8,7 +8,7 @@ import '../styles/home.css';
 
 function Principal() {
   return (
-  
+  <div className='fond'>
     <div className='fondo'>
      <img src={fondo} alt="logo" className="background-image" />
      
@@ -20,6 +20,7 @@ function Principal() {
      
      </div>
      
+    </div>
     </div>
   )
 }

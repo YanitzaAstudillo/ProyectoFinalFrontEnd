@@ -1,18 +1,23 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 
 import '../styles/footer.css';
 
+
 function Footer() {
+    const navigate = useNavigate()
   return (
-    <div className='botones'>
+    <div className='fon'>
+        <div className='botones'>
         <button id="boton1" size="lg">Demo</button>
-        <button id="boton2" size="lg">Galeria de fotos</button>
-        <button id="boton3" size="lg">Contacto</button>
+       <Link to={""}> <button id="boton2" size="lg">Galeria de fotos</button></Link>
+        <button id="boton3" onClick={()=>{navigate("/Contacto")}} size="lg">Contacto</button>
      
         <h3>¿Deseas registrarte?<Link to="register" >Registrese aquí</Link> </h3>
     </div>
+    </div>
+    
   )
 }
 

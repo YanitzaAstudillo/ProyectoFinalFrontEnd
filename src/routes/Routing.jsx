@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 import Home from '../pages/Home.jsx';
+import Register from '../pages/Register.jsx';
+import Contacto from '../pages/Contacto.jsx';
 
 
 function Routing() {
@@ -18,6 +20,8 @@ function Routing() {
                         
 
                             <Route path="/" element={<Home/>}/>
+                            <Route path="/register" element={<Register/>}/>
+                            <Route path="/contacto" element={<Contacto/>}/>
 
                       
                             

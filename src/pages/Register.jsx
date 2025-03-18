@@ -4,7 +4,8 @@ import FormRegister from '../componentes/FormRegister'
 
 function Register() {
   return (
-    <div>Register
+    <div>
+        
             <FormRegister />
     </div>
   )

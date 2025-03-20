@@ -1,6 +1,6 @@
-async function getUsers() {
+async function getProductos() {
     try {
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("http://localhost:3000/productos", {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -8,13 +8,13 @@ async function getUsers() {
         });
 
         if (!response.ok) {
-            throw new Error('Error fetching users');
+            throw new Error('Error fetching productos');
         }
 
-        const users = await response.json();
-        return users;
+        const productos = await response.json();
+        return productos;
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching productos:', error);
         throw error;
     }
 }
@@ -23,27 +23,21 @@ async function getUsers() {
 
 //////////LLAMADO POST//////////
 
-async function postUsers(nombre,email) {
-    try {
-     
-        const userData = { 
-            nombre,
-            email
+async function postProductos(nombreProducto, descripcionProducto) {
     
-        
-        };
+    const obj={
+        nombreProducto,
+        descripcionProducto
+    };
 
-
-
-        const response = await fetch("http://localhost:3000/users", {
+    try {
+        const response = await fetch("http://localhost:3000/productos", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(obj)
         });
-
-     
         return await response.json();
 
         
@@ -58,24 +52,17 @@ async function postUsers(nombre,email) {
 //////////////LLAMADO UPDATE/////////////
 
 
-async function updateUsers(nombre,apellido,edad,id) 
-{
+async function updateProductos(nombreProducto,descripcionProducto,id) {
+    const obj = {nombreProducto, descripcionProducto, id };
+    
     try {
-     
-        const userData = { 
-            nombre, 
-            apellido,
-            edad
-        
-        };
-        
 
-        const response = await fetch("http://localhost:3000/users/"+id, {
-            method: 'PUT',
+        const response = await fetch(`http://localhost:3000/productos/${id}`, {
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(obj)
         });
 
      
@@ -88,14 +75,12 @@ async function updateUsers(nombre,apellido,edad,id)
 
 
 
-
-
 //////////////LLAMADO DELETE/////////////
 
 
-async function deleteUser(id) {
+async function deleteProductos(id) {
     try {
-        const response = await fetch(`http://localhost:3000/users/${id}`, {
+        const response = await fetch(`http://localhost:3000/productos/${id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -113,4 +98,4 @@ async function deleteUser(id) {
     }
 }
 
-export default { deleteUser,postUsers,updateUsers,getUsers };
+export default { deleteProductos,postProductos,updateProductos,getProductos };

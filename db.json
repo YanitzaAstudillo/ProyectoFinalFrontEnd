@@ -76,5 +76,17 @@
       "nombre": "",
       "email": ""
     }
+  ],
+  "productos": [
+    {
+      "id": "f8a3",
+      "nombreProducto": "Caw Modelo1 Maquina Dispensadora de Peluches",
+      "descripcionProducto": "Capacidad para 50 peluches, programado para recibir monedas de 100 colones, Sí acepta billetes"
+    },
+    {
+      "id": "d688",
+      "nombreProducto": "Caw Modelo2 Maquina Dispensadora de Peluches",
+      "descripcionProducto": "Capacidad para 50 peluches, programado para recibir monedas de 100 colones, NO acepta billetes"
+    }
   ]
 }

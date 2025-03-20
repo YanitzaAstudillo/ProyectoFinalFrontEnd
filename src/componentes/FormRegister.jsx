@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import llamados from '../services/llamados'
+import llamados from '../services/llamadosProductos.jsx'
 
 import Swal from 'sweetalert2';
 

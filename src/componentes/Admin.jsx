@@ -31,14 +31,26 @@ function Admin() {
         SetDescripcionProducto(evento.target.value)
     }
 
-    function imagen(evento) {
+    
         //se hace un proceso de conversion de la imagen//
-        SetImagenProducto(evento.target.value)
-    }
+        function subirImagen(evento){
+            const archivo = evento.target.files[0]
+            if (archivo){
+                const lector = new FileReader()
+                lector.onloadend = ()=>{
+                    SetImagenProducto(lector.result)
+                }
+                lector.readAsDataURL(archivo)
+            }
+            SetImagenProducto(evento.target.value)                                                                          
+        }
+    
 
     function agregar() {
+        console.log(imagenProducto);
+        
         console.log(nombreProducto,descripcionProducto);
-        llamadosProductos.postProductos(nombreProducto,descripcionProducto)
+        llamadosProductos.postProductos(nombreProducto,descripcionProducto,imagenProducto)
     }
 
 // funcion editar con el update del llamadoProducto//
@@ -54,7 +66,9 @@ const edit=() =>{
         icon: 'question',
         confirmButtonText: 'Aceptar'
     });
-}
+    SetNombreProductoE("")
+    SetDescripcionProductoE("")
+};
 
 //funcion eliminar jalando el id para su funcionalidad//
 function eliminar(id) {
@@ -75,7 +89,8 @@ const elimin =() =>{
 //onChange para controlar los inputs (nombre, descripcion, imag)
 // Mapeo de cada elemento creando uno nuevo segun su funcion dada//
   return (
-    <div>CRUD PRODUCTOS
+    <div>
+        <h2>CRUD PRODUCTOS</h2>
         <br />
         <label htmlFor="">Nombre Producto</label>
         <input onChange={nombre} value={nombreProducto} type="text" />
@@ -83,7 +98,7 @@ const elimin =() =>{
         <input onChange={descripcion} value={descripcionProducto} type="text" />
         <br />
         <label htmlFor="">Imagen Producto</label>
-        <input onChange={imagen} value={imagenProducto} type="file" />
+        <input onChange={subirImagen} type="file" />
         <br />
         <button onClick={agregar}>Agregar</button>
         <br />
@@ -93,14 +108,16 @@ const elimin =() =>{
                     <br />
                     <strong>Nombre Producto</strong>{producto.nombreProducto} <br />
                     <strong>Descripcion Producto</strong>{producto.descripcionProducto} <br />
+                    <img src={producto.imagenProducto} alt="" />
                     <input onChange={evento=>SetProductos(evento.target.value) } /> <br />
+
+                    <input onChange={subirImagen} accept='image/*' type="file" />
                     
                     <br />
                     <input onChange= {evento=> SetNombreProductoE(evento.target.value)} type="text"  /> Nombre<br />
                     <br />
                     <input onChange= {evento=> SetDescripcionProductoE(evento.target.value)} type="text"  /> Descripcion<br />
                     <button onClick={()=>editar(producto.id)}>Confirmar edición</button> <br />
-                    
                     <button onClick={()=>eliminar(producto.id)} >Eliminar</button> <br />
                 </li>
             )

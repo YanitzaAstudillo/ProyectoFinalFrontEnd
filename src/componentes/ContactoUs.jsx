@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/contacto.css';
+import Swal from 'sweetalert2';
 
 export const ContactUs = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
+    most()
     e.preventDefault();
 
     emailjs
@@ -14,6 +16,17 @@ export const ContactUs = () => {
       })
       .then(
         () => {
+          const most=() =>{
+              Swal.fire({
+                  title:'Gracias por contactarnos!',
+                  text: 'Enviado con éxito',
+                  icon: 'question',
+                  confirmButtonText: 'Aceptar'
+              });
+              useRef("")
+          
+          };
+
           console.log('SUCCESS!');
         },
         (error) => {

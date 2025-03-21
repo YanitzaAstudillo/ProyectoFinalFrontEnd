@@ -18,7 +18,8 @@ function Card() {
             prod()
         },[])
 
-    function cargar() {
+    function botonn() {
+        console.log(productos);
         
         mostrarSweet()
     }
@@ -26,25 +27,13 @@ function Card() {
     const mostrarSweet =() => {
         Swal.fire ({
             title:'Producto Seleccionado',
-            text:'Capacidad para 50 peluches, programado para recibir monedas de 100 colones, también acepta billetes',
+            text:'Instalación y mantenimiento sin costo, comisión standard mensual del 25% de ganancias',
             icon: 'text',
             confirmButtonText:'Aceptar'
         });
     };
 
-    function cargarDos() {
-        
-        mostrarSweetDos()
-    }
-//lambda para el evento del sweet//
-    const mostrarSweetDos =() => {
-        Swal.fire ({
-            title:'Producto Seleccionado',
-            text:'Capacidad para 50 peluches, programado para recibir monedas de 100 colones, NO acepta billetes',
-            icon: 'text',
-            confirmButtonText:'Aceptar'
-        });
-    };
+    
 
   return (
     <div>
@@ -53,11 +42,12 @@ function Card() {
             {productos.map((producto,index) => (
                 <li key={index}>
                     <br />
-                    <strong>Nombre Producto</strong>{producto.nombreProducto} <br />
-                    <strong>Descripcion Producto</strong>{producto.descripcionProducto} <br />
+                    <strong>Nombre Producto </strong>{producto.nombreProducto} <br />
+                    <strong>Descripcion Producto </strong>{producto.descripcionProducto} <br />
                     <br />
-
-
+                    <img id='imaaa' src={producto.imagenProducto} alt=""  width={"190"}/>
+                    <br />
+                    <button id="boton6" onClick={botonn}>Mas informacion</button>
 
                 </li>
             )

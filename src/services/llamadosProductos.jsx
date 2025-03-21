@@ -23,11 +23,12 @@ async function getProductos() {
 
 //////////LLAMADO POST//////////
 
-async function postProductos(nombreProducto, descripcionProducto) {
+async function postProductos(nombreProducto, descripcionProducto,imagenProducto) {
     
     const obj={
-        nombreProducto,
-        descripcionProducto
+        "nombreProducto":nombreProducto,
+        "descripcionProducto":descripcionProducto,
+        "imagenProducto":imagenProducto
     };
 
     try {

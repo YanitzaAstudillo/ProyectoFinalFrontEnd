@@ -1,0 +1,12 @@
+.his{
+    margin-left: 100px;
+    margin-top: 80px;
+    border-radius: 10px;
+    width: 55%;
+    padding: 30px;
+    background: linear-gradient(
+        rgb(119, 0, 255),
+        rgba(41, 6, 94, 0.814)
+    );
+    color: white;
+  }

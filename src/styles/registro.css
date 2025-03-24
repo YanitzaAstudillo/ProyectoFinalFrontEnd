@@ -1,13 +1,23 @@
-
+.datosss{
+  background-color: #222e50;
+  position:absolute;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 1600px;
+  
+}
   .datos{
-    width: 400px;
-    height: 100%;
+    width: 500px;
+    
     background-color: rgb(119, 0, 255);
     border-radius: 20px;
     padding: 10px;
     text-align: center;
-    margin-left: 550px;
+    margin-left: 500px;
     margin-top: 50px;
+    line-height: 1.5;
+  
   }
   
   h3{
@@ -18,6 +28,7 @@
   .redondo{
     border-radius: 10px;
     outline:auto;
+    size: xx-large;
   }
   #col{
     background-color:lightblue;
@@ -25,6 +36,7 @@
     outline:auto;
     margin: 20px;
   }
+  
   #boton5{
     border-radius: 6px;
     background-color:rgb(59, 59, 234);
@@ -35,3 +47,4 @@
   #boton5:hover{
     background-color:#222e50;
   }
+  

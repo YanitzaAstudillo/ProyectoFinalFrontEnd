@@ -58,14 +58,13 @@ async function postUsers(nombre,email) {
 //////////////LLAMADO UPDATE/////////////
 
 
-async function updateUsers(nombre,apellido,edad,id) 
+async function updateUsers(nombre,email,id) 
 {
     try {
      
         const userData = { 
             nombre, 
-            apellido,
-            edad
+            email
         
         };
         

@@ -10,12 +10,8 @@ import Contacto from '../pages/Contacto.jsx';
 import Galeria from '../pages/Galeria.jsx';
 import Administrador from '../pages/Administrador.jsx';
 
-
 function Routing() {
-
-
   return (
-    <div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +21,6 @@ function Routing() {
           <Route path="/administrador" element={<Administrador />} />
         </Routes>
       </Router>
-    </div>
   );
 }
 export default Routing

@@ -5,7 +5,7 @@ import FormRegister from '../componentes/FormRegister'
 function Register() {
   return (
     <div>
-        
+          
             <FormRegister />
     </div>
   )

@@ -1,9 +1,9 @@
 form{
-    margin-left: 400px;
-    margin-top: 50px;
+    height: 490px;
+    margin-left: 700px;
     border-radius: 10px;
     position: absolute;
-    padding: 60px;
+    padding: 80px;
     background: linear-gradient(
         rgb(119, 0, 255),
         rgba(41, 6, 94, 0.814)
@@ -32,5 +32,6 @@ form{
     font-size: 14px;
     background-color: #4460AA;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 6px;
   }
+  

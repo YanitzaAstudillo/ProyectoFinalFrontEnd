@@ -1,0 +1,12 @@
+.add{
+    margin-left: 300px;
+    margin-top: 50px;
+    border-radius: 9px;
+    position: absolute;
+    padding: 30px;
+    background: linear-gradient(
+        rgb(255, 175, 210),
+        rgba(41, 6, 94, 0.814)
+    );
+    max-width: 100%;
+}

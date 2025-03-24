@@ -48,7 +48,6 @@ function Card() {
                     <img id='imaaa' src={producto.imagenProducto} alt=""  width={"190"}/>
                     <br />
                     <button id="boton6" onClick={botonn}>Mas informacion</button>
-
                 </li>
             )
         )}

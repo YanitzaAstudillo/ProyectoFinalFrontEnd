@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import llamadosProductos from '../services/llamadosProductos.jsx';
 import Swal from 'sweetalert2';
+import '../styles/ad.css';
+import llamados from '../services/llamados.jsx';
 
 
-
-//funcion asyncrona para la obtencion de datos mediante el get de llamadosProductos//
+//funcion asyncrona para la obtencion de datos mediante el get de llamadosProductos, uso del useEffect//
 function Admin() {
 
 //hooks para las funcionalidades//
@@ -45,7 +46,7 @@ function Admin() {
             SetImagenProducto(evento.target.value)                                                                          
         }
     
-
+// funcion agregar con el post del llamadoProducto para crear nuevos productos//
     function agregar() {
         console.log(imagenProducto);
         
@@ -70,7 +71,7 @@ const edit=() =>{
     SetDescripcionProductoE("")
 };
 
-//funcion eliminar jalando el id para su funcionalidad//
+//funcion eliminar Producto jalando el id para su funcionalidad//
 function eliminar(id) {
     console.log(id);
     
@@ -84,21 +85,37 @@ const elimin =() =>{
         icon: 'question',
         confirmButtonText: 'Aceptar'
     });
+    //Funcion eliminar Usuario con sweetalert//
+    function elimn(id) {
+                llamados.deleteUser(id)
+                eliii()
+            }
+        const eliii=() =>{
+            Swal.fire({
+                title:'Eliminar usuario',
+                text: 'Desea eliminar?',
+                icon: 'question',
+                confirmButtonText: 'Aceptar'
+            });
+        }
+
 }
 
 //onChange para controlar los inputs (nombre, descripcion, imag)
 // Mapeo de cada elemento creando uno nuevo segun su funcion dada//
   return (
-    <div>
+    <div className='add'>
         <h2>CRUD PRODUCTOS</h2>
         <br />
         <label htmlFor="">Nombre Producto</label>
-        <input onChange={nombre} value={nombreProducto} type="text" />
+        <input onChange={nombre} value={nombreProducto} type="text" /> <br />
+        <br />
         <label htmlFor="">Descripcion producto</label>
-        <input onChange={descripcion} value={descripcionProducto} type="text" />
+        <input onChange={descripcion} value={descripcionProducto} type="text" /> <br />
         <br />
         <label htmlFor="">Imagen Producto</label>
         <input onChange={subirImagen} type="file" />
+        <br />
         <br />
         <button onClick={agregar}>Agregar</button>
         <br />
@@ -108,11 +125,13 @@ const elimin =() =>{
                     <br />
                     <strong>Nombre Producto</strong>{producto.nombreProducto} <br />
                     <strong>Descripcion Producto</strong>{producto.descripcionProducto} <br />
-                    <img src={producto.imagenProducto} alt="" />
+                    <br />
+                    <img src={producto.imagenProducto} alt="" width={"170"} />
+                    <br />
                     <input onChange={evento=>SetProductos(evento.target.value) } /> <br />
-
+                    <br />
                     <input onChange={subirImagen} accept='image/*' type="file" />
-                    
+                    <br />
                     <br />
                     <input onChange= {evento=> SetNombreProductoE(evento.target.value)} type="text"  /> Nombre<br />
                     <br />
@@ -123,6 +142,20 @@ const elimin =() =>{
             )
         )}
         </ul>
+        <div>
+        <h2>CRUD USUARIOS</h2>
+        <br />
+        {usuarios.map((usuario, index)=> (
+            <li key={index}>
+                <br />
+                <button onClick={()=>elimn(usuario.id)} >Eliminar</button> <br />
+            </li>
+        )
+        )}
+
+        </div>
+
+
     </div>
   )
 }

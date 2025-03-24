@@ -28,8 +28,8 @@ async function postUsers(nombre,email) {
      
         const userData = { 
             nombre,
-            email
-    
+            email,
+            "rol": "usuario"
         
         };
 
@@ -58,23 +58,18 @@ async function postUsers(nombre,email) {
 //////////////LLAMADO UPDATE/////////////
 
 
-async function updateUsers(nombre,email,id) 
+async function updateUsers(nombreUsuario,emailUsuario,id) 
 {
+    const obj ={nombreUsuario, emailUsuario,id};
     try {
-     
-        const userData = { 
-            nombre, 
-            email
-        
-        };
         
 
-        const response = await fetch("http://localhost:3000/users/"+id, {
-            method: 'PUT',
+        const response = await fetch(`http://localhost:3000/users/${id}`, {
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(userData)
+            body: JSON.stringify(obj)
         });
 
      

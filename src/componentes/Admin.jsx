@@ -15,7 +15,12 @@ function Admin() {
     const [imagenProducto, SetImagenProducto]=useState()
     const [nombreProductoE,SetNombreProductoE] = useState("")
     const [descripcionProductoE, SetDescripcionProductoE] = useState("")
+    const [usuarios, SetUsuarios]=useState([])
+    const [nombreUsuarioEd, SetNombreUsuarioEd]=useState("")
+    const [emailUsuarioEd, SetEmailUsuarioEd]=useState("")
 
+
+//useEffects tanto de productos como de usuarios para los get//
     useEffect(()=>{
         async function prod() {
             const dato= await llamadosProductos.getProductos()
@@ -24,6 +29,15 @@ function Admin() {
         prod()
     },[])
 
+    useEffect(()=>{
+        async function usu() {
+            const datoUsuario= await llamados.getUsers()
+            SetUsuarios(datoUsuario)
+        }
+        usu()
+    },[])
+
+    //funcion para nombre y descripcion para la realizacion de los inputs//
     function nombre(evento) {
         SetNombreProducto(evento.target.value)
     }
@@ -32,8 +46,8 @@ function Admin() {
         SetDescripcionProducto(evento.target.value)
     }
 
-    
-        //se hace un proceso de conversion de la imagen//
+
+    //se hace un proceso de conversion de la imagen//
         function subirImagen(evento){
             const archivo = evento.target.files[0]
             if (archivo){
@@ -55,13 +69,12 @@ function Admin() {
     }
 
 // funcion editar con el update del llamadoProducto//
-function editar(id) {
-    
-    llamadosProductos.updateProductos(nombreProductoE,descripcionProductoE,id)
-    edit()
-}
-const edit=() =>{
-    Swal.fire({
+    function editar(id) {
+        llamadosProductos.updateProductos(nombreProductoE,descripcionProductoE,id)
+        edit()
+    }
+    const edit=() =>{
+        Swal.fire({
         title:'Editar producto',
         text: 'Desea editar?',
         icon: 'question',
@@ -85,11 +98,14 @@ const elimin =() =>{
         icon: 'question',
         confirmButtonText: 'Aceptar'
     });
-    //Funcion eliminar Usuario con sweetalert//
-    function elimn(id) {
-                llamados.deleteUser(id)
+}
+    //Funcion eliminar USUARIO con sweetalert//
+    function elimnn(id) {
+        console.log(id);
+        
+             llamados.deleteUser(id)
                 eliii()
-            }
+    }
         const eliii=() =>{
             Swal.fire({
                 title:'Eliminar usuario',
@@ -98,11 +114,15 @@ const elimin =() =>{
                 confirmButtonText: 'Aceptar'
             });
         }
+        //funcion editar USUARIO //
+        function editarUsu(id) {
+            llamados.updateUsers(nombreUsuarioEd, emailUsuarioEd,id)
+            console.log(nombreUsuarioEd, emailUsuarioEd);
+            
+        }
+       
 
-}
-
-//onChange para controlar los inputs (nombre, descripcion, imag)
-// Mapeo de cada elemento creando uno nuevo segun su funcion dada//
+// Mapeo Producto y Mapeo Usuario su funcion dada y sus respectivos inputs//
   return (
     <div className='add'>
         <h2>CRUD PRODUCTOS</h2>
@@ -143,19 +163,22 @@ const elimin =() =>{
         )}
         </ul>
         <div>
-        <h2>CRUD USUARIOS</h2>
-        <br />
+            <br />
+        <h1>CRUD USUARIOS</h1>
         {usuarios.map((usuario, index)=> (
             <li key={index}>
                 <br />
-                <button onClick={()=>elimn(usuario.id)} >Eliminar</button> <br />
+                <strong>Nombre Usuario</strong>{usuario.nombreUsuario} <br />
+                <strong>Email Usuario</strong>{usuario.emailUsuario} <br />
+                <input onChange= {evento=> SetNombreUsuarioEd(evento.target.value)} type="text"  /> Nombre<br />
+                <input onChange= {evento=> SetEmailUsuarioEd(evento.target.value)} type="text"  /> Email<br />
+                <input onChange={evento=>SetUsuarios(evento.target.value) } />id <br />
+                <button onClick={()=>editarUsu(usuario.id)}>Confirmar edición</button> <br />
+                <button onClick={()=>elimnn(usuario.id)} >Eliminar</button> <br />
             </li>
         )
-        )}
-
+        )};
         </div>
-
-
     </div>
   )
 }

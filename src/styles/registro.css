@@ -47,4 +47,9 @@
   #boton5:hover{
     background-color:#222e50;
   }
-  
+  #co{
+    background-color:rgb(117, 159, 173);
+    border-radius: 10px;
+    outline:auto;
+    margin: 20px;
+  }

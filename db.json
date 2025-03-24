@@ -1,80 +1,27 @@
 {
   "users": [
     {
-      "id": "05eb"
+      "id": "0",
+      "nombreUsuario": "admin123",
+      "emailUsuario": "adminAcceso.com",
+      "rol": "admin"
     },
     {
-      "id": "c6c7",
-      "nombre": "rodrigo",
-      "email": "rodrigo.com"
-    },
-    {
-      "id": "b462",
-      "nombre": "Kevin",
-      "email": "Kevin.com"
-    },
-    {
-      "id": "ed09",
-      "nombre": "Kiany",
-      "email": "Kiany.com"
-    },
-    {
-      "id": "730f",
-      "nombre": "teresa",
-      "email": "tersa.com"
-    },
-    {
-      "id": "c8cf",
-      "nombre": "jhared",
-      "email": "jhared.com"
-    },
-    {
-      "id": "4af6",
-      "nombre": "josep",
-      "email": "josep.com"
-    },
-    {
-      "id": "bc45",
-      "nombre": "maria",
-      "email": "maria.com"
-    },
-    {
-      "id": "15e9",
-      "nombre": "pedrito",
-      "email": "pedrito.com"
-    },
-    {
-      "id": "2e0f",
-      "nombre": "peter",
-      "email": "peter.com"
-    },
-    {
-      "id": "9e62",
-      "nombre": "1111",
-      "email": "2222"
-    },
-    {
-      "id": "9433",
-      "nombre": "hahahhahah",
-      "email": "jjajjaj.com"
-    },
-    {
-      "id": "22d2",
-      "nombre": "yeyeyyeyey",
-      "email": "yeyyeye.com"
-    },
-    {
-      "id": "dca9",
-      "nombre": "jajajjaja",
-      "email": "jajja.com"
-    },
-    {
-      "id": "1815"
+      "id": "1815",
+      "nombreUsuario": "pepe",
+      "emailUsuario": "pepe.com"
     },
     {
       "id": "ca8b",
       "nombre": "",
       "email": ""
+    },
+    {
+      "id": "daef",
+      "nombre": "rositaaa",
+      "email": "rosita.com",
+      "nombreUsuario": "osito",
+      "emailUsuario": "osito.com"
     }
   ],
   "productos": [

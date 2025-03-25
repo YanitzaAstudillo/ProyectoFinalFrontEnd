@@ -9,6 +9,7 @@ import Register from '../pages/Register.jsx';
 import Contacto from '../pages/Contacto.jsx';
 import Galeria from '../pages/Galeria.jsx';
 import Administrador from '../pages/Administrador.jsx';
+import Login from '../componentes/LoginAces.jsx';
 
 function Routing() {
   return (
@@ -19,6 +20,7 @@ function Routing() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/administrador" element={<Administrador />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
   );

@@ -11,3 +11,14 @@
     max-width: 100%;
     list-style: none;
 }
+#ree{
+    border-radius: 7px;
+    outline:auto;
+  }
+  #boton9{
+    border-radius: 6px;
+    background-color:#222e50;
+    color:white;
+    outline:auto;
+    padding: 6px;
+  }

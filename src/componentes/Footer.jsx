@@ -10,10 +10,10 @@ function Footer() {
   return (
     <div className='fon'>
         <div className='botones'>
-        <button id="boton1" size="lg">Demo</button>
-       <Link to={"/Galeria"}> <button id="boton2" size="lg">Galeria de fotos</button></Link>
-        <button id="boton3" onClick={()=>{navigate("/Contacto")}} size="lg">Contacto</button>
-     
+        <Link to={"/Demo"}> <button id="boton1" >Demo productos Top</button></Link>
+        <Link to={"/Galeria"}> <button id="boton1" >Galeria de fotos</button></Link>
+        
+        <button id="boton1" onClick={()=>{navigate("/Contacto")}} size="lg">Contacto</button>
         <h3>¿Deseas registrarte?<Link to="register" >Registrese aquí</Link> </h3>
     </div>
     </div>

@@ -38,31 +38,37 @@ function Login() {
       
     }
     function acess() {
-    const encontrado = usuarios.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.emailUsuario === emailUsuario)
-    if (encontrado.rol==="admin") {
-      navigate('/administrador')
-      return
-    }else if (encontrado.rol==="usuario"){
-      navigate('/Galeria')
-      return
-    }else{
-      alert("AHHHHH")
-      return
+      const encontrado = usuarios.find(usuario => usuario.nombreUsuario === nombreUsuario && usuario.emailUsuario === emailUsuario)
+      if (encontrado){
+        if (encontrado.rol === "admin") {
+            navigate('/Administrador');
+        } else if (encontrado.rol === "usuario") {
+            navigate('/Galeria');
+        } 
+      } else {
+        alert("Usuario no encontrado");
     }
-    }
+  }
 
 
   return (
-    <div className='looo'>Login
-        <br />
+    <div className='looo'>
+    <div id="lg">
+      <h3>Login</h3>
       <label htmlFor="">Nombre</label><br />
-      <input value={nombreUsuario} onChange={nombre} type="text" /><br />
-      <label htmlFor="">email</label><br />
-      <input value={emailUsuario} onChange={email} type="text" /><br />
+      <input className="red" value={nombreUsuario} onChange={nombre} type="text" /><br />
       <br />
-      <button onClick={acess}>Iniciar</button>
+      <label htmlFor="">Email</label><br />
+      <input className="red" value={emailUsuario} onChange={email} type="text" /><br />
+      <br />
+      <button id= "boton8" onClick={acess}>Iniciar</button>
+      <br />
+      <br />
       <br />
       <p>¿No tienes cuenta? <Link to="/register">Regístrate aquí</Link></p>
+
+    </div>
+      
     </div>
   )
 }

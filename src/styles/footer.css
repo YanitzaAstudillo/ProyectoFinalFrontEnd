@@ -7,7 +7,7 @@
 }
 .botones{
     text-align: left;
-    margin-left: 130px;
+    margin-left: 118px;
 }
 #boton1{
     background-color: black;
@@ -15,23 +15,7 @@
     border-radius: 10px;
     border: white solid 2px;
     padding: 10px;
-    margin: 10px;
-    margin-left: 100px;
-  }
-  #boton2{
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    border: white solid 2px;
-    padding: 10px;
-    margin: 10px;
+    margin: 9px;
     
   }
-  #boton3{
-    background-color: black;
-    color: white;
-    border-radius: 10px;
-    border: white solid 2px;
-    padding: 10px;
-    margin: 10px;
-  }
+  

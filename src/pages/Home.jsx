@@ -5,7 +5,7 @@ import Footer from '../componentes/Footer'
 
 function Home() {
   return (
-    <div>
+    <div className='todo'>
 
       <Principal/>
       <Footer/>

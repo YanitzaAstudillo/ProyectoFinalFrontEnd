@@ -26,9 +26,9 @@
     color: black;
   }
   .redondo{
-    border-radius: 10px;
+    border-radius: 7px;
     outline:auto;
-    size: xx-large;
+    
   }
   #col{
     background-color:lightblue;

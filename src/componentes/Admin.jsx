@@ -128,16 +128,16 @@ const elimin =() =>{
         <h2>CRUD PRODUCTOS</h2>
         <br />
         <label htmlFor="">Nombre Producto</label>
-        <input onChange={nombre} value={nombreProducto} type="text" /> <br />
+        <input id="ree" onChange={nombre} value={nombreProducto} type="text" /> <br />
         <br />
         <label htmlFor="">Descripcion producto</label>
-        <input onChange={descripcion} value={descripcionProducto} type="text" /> <br />
+        <input id="ree" onChange={descripcion} value={descripcionProducto} type="text" /> <br />
         <br />
         <label htmlFor="">Imagen Producto</label>
-        <input onChange={subirImagen} type="file" />
+        <input id="ree" onChange={subirImagen} type="file" />
         <br />
         <br />
-        <button onClick={agregar}>Agregar</button>
+        <button id="boton9" onClick={agregar}>Agregar</button>
         <br />
         <ul>
             {productos.map((producto,index) => (
@@ -146,18 +146,18 @@ const elimin =() =>{
                     <strong>Nombre Producto</strong>{producto.nombreProducto} <br />
                     <strong>Descripcion Producto</strong>{producto.descripcionProducto} <br />
                     <br />
-                    <img src={producto.imagenProducto} alt="" width={"170"} />
+                    <img src={producto.imagenProducto} alt="" width={"190"} />
                     <br />
-                    <input onChange={evento=>SetProductos(evento.target.value) } /> <br />
+                    <input id="ree" onChange={evento=>SetProductos(evento.target.value) } /> <br />
                     <br />
-                    <input onChange={subirImagen} accept='image/*' type="file" />
+                    <input id="ree" onChange={subirImagen} accept='image/*' type="file" />
                     <br />
                     <br />
-                    <input onChange= {evento=> SetNombreProductoE(evento.target.value)} type="text"  /> Nombre<br />
+                    <input id="ree" onChange= {evento=> SetNombreProductoE(evento.target.value)} type="text"  /> Nombre<br />
                     <br />
                     <input onChange= {evento=> SetDescripcionProductoE(evento.target.value)} type="text"  /> Descripcion<br />
-                    <button onClick={()=>editar(producto.id)}>Confirmar edición</button> <br />
-                    <button onClick={()=>eliminar(producto.id)} >Eliminar</button> <br />
+                    <button id="boton9" onClick={()=>editar(producto.id)}>Confirmar edición</button> <br />
+                    <button id="boton9" onClick={()=>eliminar(producto.id)} >Eliminar</button> <br />
                 </li>
             )
         )}
@@ -170,11 +170,11 @@ const elimin =() =>{
                 <br />
                 <strong>Nombre Usuario</strong>{usuario.nombreUsuario} <br />
                 <strong>Email Usuario</strong>{usuario.emailUsuario} <br />
-                <input onChange= {evento=> SetNombreUsuarioEd(evento.target.value)} type="text"  /> Nombre<br />
-                <input onChange= {evento=> SetEmailUsuarioEd(evento.target.value)} type="text"  /> Email<br />
-                <input onChange={evento=>SetUsuarios(evento.target.value) } />id <br />
-                <button onClick={()=>editarUsu(usuario.id)}>Confirmar edición</button> <br />
-                <button onClick={()=>elimnn(usuario.id)} >Eliminar</button> <br />
+                <input id="ree" onChange= {evento=> SetNombreUsuarioEd(evento.target.value)} type="text"  /> Nombre<br />
+                <input id="ree" onChange= {evento=> SetEmailUsuarioEd(evento.target.value)} type="text"  /> Email<br />
+                <input id="ree" onChange={evento=>SetUsuarios(evento.target.value) } />id <br />
+                <button id="boton9" onClick={()=>editarUsu(usuario.id)}>Confirmar edición</button> <br />
+                <button id="boton9" onClick={()=>elimnn(usuario.id)} >Eliminar</button> <br />
             </li>
         )
         )};

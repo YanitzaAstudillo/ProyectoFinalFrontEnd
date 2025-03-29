@@ -10,6 +10,7 @@ import Contacto from '../pages/Contacto.jsx';
 import Galeria from '../pages/Galeria.jsx';
 import Administrador from '../pages/Administrador.jsx';
 import Login from '../componentes/LoginAces.jsx';
+import Demo from '../pages/Demo.jsx';
 
 function Routing() {
   return (
@@ -21,6 +22,7 @@ function Routing() {
           <Route path="/galeria" element={<Galeria />} />
           <Route path="/administrador" element={<Administrador />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/demo" element={<Demo />} />
         </Routes>
       </Router>
   );

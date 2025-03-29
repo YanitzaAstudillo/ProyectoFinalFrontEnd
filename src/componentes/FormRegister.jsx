@@ -24,8 +24,8 @@ function FormRegister() {
      //sweetAlert
      const mostrarVentana = () => {
          Swal.fire ({
-             title:'Exito!',
-             text: 'Realizado',
+             title:'Realizado con éxito!',
+             text: 'Se ha registrado satisfactoriamente',
              icon:'Success',
              confirmButtonText: 'Aceptar'
          });
@@ -39,25 +39,25 @@ function FormRegister() {
     
     <div className='datosss'>
         <div className='datos'>
-        <h3>Registro</h3>
-        <br />
-        <label htmlFor="">Nombre</label><br />
-        <input className="redondo"value={nombreUsuario} onChange={nombre} type="text" size="lg" /><br />
-        <br />
-        <label htmlFor="">Email</label><br />
-        <input className="redondo" value={emailUsuario} onChange={email} type="text" size="lg" /><br />
-        <br />
-        <button id="boton5" type='submit' onClick={enviar}>Enviar</button><br />
-        <br />
-        <div id="col">
+            <br />
+            <h2>Registro</h2>
+            <br />
+            <label htmlFor="">Nombre</label><br />
+            <input className="redondo"value={nombreUsuario} onChange={nombre} type="text" size="lg" /><br />
+            <br />
+            <label htmlFor="">Email</label><br />
+            <input className="redondo" value={emailUsuario} onChange={email} type="text" size="lg" /><br />
+            <br />
+            <button id="boton5" type='submit' onClick={enviar}>Enviar</button><br />
+            <br />
+         <div id="col">
             <p>Pagina principal <Link to={"/"}>Home</Link></p>
-        </div>
-        <div id='co'>
+            </div>
+            <div id='co'>
             <p>Ya tienes cuenta? <Link to={"/Login"}>Login</Link></p>
-        </div>
-        <br />
-        <br />
-        <h4>Bienvenidos!</h4>
+         </div>
+            <br />
+            <h3>Bienvenidos!</h3>
         </div>
     </div>
   )

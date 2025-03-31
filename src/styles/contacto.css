@@ -1,11 +1,16 @@
 
 .todoContacto{
   background-color: #222e50;
+  
 }
 form{
-  margin-top: 70px;
+    background-color: #222e50;
+    box-sizing: border-box;
+    background-size: cover;
+    
+    margin-top: 90px;
     height: 490px;
-    margin-left: 999px;
+    margin-left: 950px;
     border-radius: 10px;
     position: absolute;
     padding: 80px;

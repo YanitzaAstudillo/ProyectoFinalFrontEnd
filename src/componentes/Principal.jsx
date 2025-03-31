@@ -8,7 +8,7 @@ import '../styles/home.css';
 function Principal() {
   return (
   <div className='todox'>
-    <img src="arreglado" alt="arreglado" srcset="src/assets/arreglado.jpg" width={"1300"}  />
+    <img src="arreglado" alt="arreglado" srcset="src/assets/arreglado.jpg" width={"1300"} height={600} />
     
   </div>
   )

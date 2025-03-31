@@ -1,15 +1,23 @@
 .historia{
     background-color: #222e50;
+    box-sizing: border-box;
+    background-size: cover;
+    display: grid;
 }
 .his{
     margin-left: 100px;
     margin-top: 30px;
     border-radius: 10px;
     width: 55%;
+    
     padding: 30px;
     background: linear-gradient(
         rgb(119, 0, 255),
         rgba(41, 6, 94, 0.814)
     );
     color: white;
+  }
+  h3{
+    margin-left: 10px;
+    padding: 5px;
   }

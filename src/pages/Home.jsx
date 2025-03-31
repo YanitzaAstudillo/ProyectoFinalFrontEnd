@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Principal from '../componentes/principal'
+import Principal from '../componentes/Principal'
 import Footer from '../componentes/Footer'
 
 function Home() {

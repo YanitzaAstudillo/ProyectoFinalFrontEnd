@@ -5,7 +5,7 @@ import { Navbar } from 'react-bootstrap'
 
 function Galeria() {
   return (
-    <div>
+    <div className='blue'>
             
             <Navbar/>
             <Card/>

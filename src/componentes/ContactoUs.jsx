@@ -32,16 +32,16 @@ export const ContactUs = () => {
 <ul className="nav nav-pills">
           
       <li className="nav-item">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
+        <a className="nav-link active" aria-current="page" href="/">Home</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="#">Asistencia</a>
+        <a className="nav-link" href="/galeria">Galeria</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="/Contacto">Contactenos</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+        <a className="nav-link" href="/login">Login</a>
       </li>
     </ul>
 

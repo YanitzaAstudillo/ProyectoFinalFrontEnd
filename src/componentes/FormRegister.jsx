@@ -50,6 +50,7 @@ function FormRegister() {
             <br />
             <button id="boton5" type='submit' onClick={enviar}>Enviar</button><br />
             <br />
+            <br />
          <div id="col">
             <p>Pagina principal <Link to={"/"}>Home</Link></p>
             </div>
@@ -57,7 +58,8 @@ function FormRegister() {
             <p>Ya tienes cuenta? <Link to={"/Login"}>Login</Link></p>
          </div>
             <br />
-            <h3>Bienvenidos!</h3>
+            <h2>Bienvenidos!</h2>
+            <br />
         </div>
     </div>
   )

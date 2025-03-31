@@ -3,7 +3,9 @@
     rgb(119, 0, 255),
     rgba(41, 6, 94, 0.814)
 );
-    height: 300px;
+    height: 230px;
+    box-sizing: border-box;
+    background-size: cover;
 }
 .botones{
     text-align: left;
@@ -17,5 +19,9 @@
     padding: 10px;
     margin: 9px;
     
+  }
+  h3{
+    text-align: center;
+    padding: 0px;
   }
   

@@ -53,12 +53,29 @@ function Login() {
 
   return (
     <div className='looo'>
+
+<ul className="nav nav-pills">
+          
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/galeria">Galeria</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link " href="/Contacto">Contactenos</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+
     <div id="lg">
       <h3>Login</h3>
-      <label htmlFor="">Nombre</label><br />
+      <label htmlFor="">Nombre</label>
       <input className="red" value={nombreUsuario} onChange={nombre} type="text" /><br />
       <br />
-      <label htmlFor="">Email</label><br />
+      <label htmlFor="">Email</label>
       <input className="red" value={emailUsuario} onChange={email} type="text" /><br />
       <br />
       <button id= "boton8" onClick={acess}>Iniciar</button>

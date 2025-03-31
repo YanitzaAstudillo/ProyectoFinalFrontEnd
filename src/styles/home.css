@@ -1,11 +1,13 @@
 .todo{
   background-color: rgb(119, 0, 255);
+  flex-direction: column;
+  box-sizing: border-box;
 }
 .todox{
     
     background-color: rgb(119, 0, 255);
     margin-left: 100px;
-    height: ;
+    
     background-size: cover;
     margin-top: 0%;
 }

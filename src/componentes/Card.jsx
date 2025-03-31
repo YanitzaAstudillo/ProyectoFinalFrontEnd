@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react'
 import Swal from "sweetalert2";
 import '../styles/galeria.css';
 import llamadosProductos from '../services/llamadosProductos';
+
 import { Link } from 'react-router-dom'
 
 function Card() {
@@ -36,12 +37,11 @@ function Card() {
     <div className='azul'>
 
         <ul className="nav nav-pills">
-          <br />
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="#">Asistencia</a>
+                <a className="nav-link" href="/register">Registro</a>
             </li>
             <li className="nav-item">
                 <a className="nav-link" href="/Contacto">Contactenos</a>
@@ -50,7 +50,7 @@ function Card() {
                 <a className="nav-link disabled" aria-disabled="true">Disabled</a>
             </li>
         </ul>
-
+        <br />
         <div className='cuadro1'>
         <ul>
             {productos.map((producto,index) => (
@@ -62,6 +62,7 @@ function Card() {
                     <img id='imaaa' src={producto.imagenProducto} alt=""  width={"200"}/>
                     <br />
                     <button id="boton6" onClick={botonn}>Mas informacion</button>
+                    <button><i class="bi bi-bag-plus-fill"></i></button>
                 </li>
             )
         )}

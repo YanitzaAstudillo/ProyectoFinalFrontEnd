@@ -5,6 +5,7 @@ import llamadosProductos from '../services/llamadosProductos';
 
 import { Link } from 'react-router-dom'
 
+//funcion asyncrona para la obtencion de lectura de los productos del llamadosProductos//
 function Card() {
     const [productos,SetProductos]=useState([])
     
@@ -15,7 +16,7 @@ function Card() {
             }
             prod()
         },[])
-
+    //funcion del boton que muestra una alerta con la descripcion ADICIONAL del producto//
     function botonn() {
         console.log(productos);
         
@@ -31,7 +32,7 @@ function Card() {
         });
     };
 
-    
+    //navbar de pags secundarias y mapeo que obtiene la lectura de productos agregados en el Admin
 
   return (
     <div className='azul'>

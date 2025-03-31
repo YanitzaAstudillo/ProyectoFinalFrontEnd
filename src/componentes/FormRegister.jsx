@@ -61,6 +61,7 @@ function FormRegister() {
             <h2>Bienvenidos!</h2>
             <br />
         </div>
+        
     </div>
   )
 }

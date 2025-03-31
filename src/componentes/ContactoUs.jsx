@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import '../styles/contacto.css';
 
-
+//template para el uso del programa que envia y contacta a mi correo personal//
 export const ContactUs = () => {
   const form = useRef();
 
@@ -25,7 +25,7 @@ export const ContactUs = () => {
         },
       );
   };
-
+//navbar de pag secundarias y template del formulario para el correo personal//
   return (
     <div className='az'>
 
@@ -44,7 +44,7 @@ export const ContactUs = () => {
         <a className="nav-link" href="/login">Login</a>
       </li>
     </ul>
-
+    
       <form ref={form} onSubmit={sendEmail}>
         <h2>Contacto</h2>
         <br />

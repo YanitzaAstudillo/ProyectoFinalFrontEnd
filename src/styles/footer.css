@@ -24,4 +24,15 @@
     text-align: center;
     padding: 0px;
   }
-  
+  #u{
+    color: white;
+    position: absolute;
+   animation: mymove 15s infinite;
+  }
+
+  @keyframes mymove {
+    from {left: 900px;}
+    to {left: 0px;}
+    from {left: 0;}
+    to {left: 900px;}
+  }

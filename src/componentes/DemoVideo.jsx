@@ -25,10 +25,24 @@ function DemoVideo() {
         </div>
       <br />
       <div>
-      <video id= "vid" width="400" height={"550"}controls>
+      <video id= "vid" width="330" height={"550"}controls>
         <source src="../src/assets/videoDos.mp4" type="video/mp4" />
       </video>
       </div>
+
+    <div id='navi'>
+    <ul className="nav nav-pills">
+            <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/register">Registro</a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link" href="/Contacto">Contactenos</a>
+            </li>
+        </ul>
+    </div>
 
     </div>
   )

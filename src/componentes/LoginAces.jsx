@@ -48,6 +48,7 @@ function Login() {
       } else {
         alert("Usuario no encontrado");
     }
+    localStorage.setItem("emailAdmin", "admin");
   }
 
 
@@ -66,7 +67,7 @@ function Login() {
             <a className="nav-link " href="/Contacto">Contactenos</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a className="nav-link " href="/Demo">Demo</a>
           </li>
         </ul>
 

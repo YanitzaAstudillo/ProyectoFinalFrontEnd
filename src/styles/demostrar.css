@@ -2,8 +2,8 @@
     background-color: #222e50;
     box-sizing: border-box;
     background-size: cover;
-    height: 100%;
-    
+    height: 105%;
+   
     position:absolute;
     color: white;
     display: flex;
@@ -11,7 +11,7 @@
   #vid{
     border-radius: 15px;
     border: white solid 2px;
-    
+    margin: 20px;
   }
   #parrafos{
     margin: 5px;
@@ -27,7 +27,7 @@
     color: white;
   }
   .cuadro7{
-    margin: 5px;
+    margin: 7px;
     margin-left: 30px;
     border-radius: 10px;
     width: 35%;
@@ -40,4 +40,10 @@
     color: white;
   
   }
-  
+  #navi{
+    text-align: center;
+    margin-top: 580px;
+    position: fixed;
+    padding: 5px;
+    
+  }

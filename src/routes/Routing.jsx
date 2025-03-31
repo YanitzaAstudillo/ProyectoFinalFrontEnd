@@ -11,6 +11,7 @@ import Galeria from '../pages/Galeria.jsx';
 import Administrador from '../pages/Administrador.jsx';
 import Login from '../componentes/LoginAces.jsx';
 import Demo from '../pages/Demo.jsx';
+import Privada from '../componentes/Privada.jsx';
 
 function Routing() {
   return (
@@ -20,7 +21,7 @@ function Routing() {
           <Route path="/register" element={<Register />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/galeria" element={<Galeria />} />
-          <Route path="/administrador" element={<Administrador />} />
+          <Route path="/administrador" element={<Privada children={<Administrador/>}/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/demo" element={<Demo />} />
         </Routes>

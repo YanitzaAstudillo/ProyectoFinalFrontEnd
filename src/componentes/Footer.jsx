@@ -15,7 +15,11 @@ function Footer() {
         
         <button id="boton1" onClick={()=>{navigate("/Contacto")}} size="lg">Contacto</button>
         <h3>¿Deseas registrarte?<Link to="register" >Registrese aquí</Link> </h3>
-    </div>
+        <br />
+          <div >
+            <h4 id="u">@2025 Todos los Derechos Reservados</h4>
+          </div>
+      </div>
     </div>
     
   )

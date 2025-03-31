@@ -1,15 +1,20 @@
 .add{
-    margin-left: 300px;
-    margin-top: 50px;
+    display: flex;
+    margin-top: 0px;
     border-radius: 9px;
     position: absolute;
+    width: 100%;
     padding: 30px;
     background: linear-gradient(
         rgb(255, 175, 210),
         rgba(41, 6, 94, 0.814)
     );
-    max-width: 100%;
+    height: 600%
+    list-style-type: none;
     list-style: none;
+    max-height:600%;
+    box-sizing: border-box;
+    background-size: cover;
 }
 #ree{
     border-radius: 7px;
@@ -21,4 +26,21 @@
     color:white;
     outline:auto;
     padding: 6px;
+  }
+  #uno{
+    position:relative;
+    padding: 20px;
+    margin-right: 800px;
+    width: 35%;
+    height: 100%;
+    
+  }
+  #dos{
+    position: absolute;
+    padding: 20px;
+    margin-left: 800px;
+    margin-top: 0px;
+    width: 35%;
+    height: 100%;
+    background-size: cover;
   }

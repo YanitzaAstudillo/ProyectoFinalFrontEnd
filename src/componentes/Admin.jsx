@@ -6,7 +6,7 @@ import llamados from '../services/llamados.jsx';
 
 
 //funcion asyncrona para la obtencion de datos mediante el get de llamadosProductos, uso del useEffect//
-function Admin() {
+function Admin({}) {
 
 //hooks para las funcionalidades//
     const [productos,SetProductos]=useState([])
@@ -120,11 +120,21 @@ const elimin =() =>{
             console.log(nombreUsuarioEd, emailUsuarioEd);
             
         }
+
+        function usuarioValido() {
+            const adm = localStorage.getItem("emailUsuario")
+            if (adm){
+                return true
+            }else{
+                return false
+            }
+        }
        
 
 // Mapeo Producto y Mapeo Usuario su funcion dada y sus respectivos inputs//
   return (
     <div className='add'>
+        <section id="uno">
         <h2>CRUD PRODUCTOS</h2>
         <br />
         <label htmlFor="">Nombre Producto</label>
@@ -162,6 +172,9 @@ const elimin =() =>{
             )
         )}
         </ul>
+        </section>
+        
+        <section id="dos">
         <div>
             <br />
         <h1>CRUD USUARIOS</h1>
@@ -179,6 +192,9 @@ const elimin =() =>{
         )
         )};
         </div>
+        </section>
+        
+
     </div>
   )
 }

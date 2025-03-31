@@ -47,9 +47,10 @@ function Card() {
                 <a className="nav-link" href="/Contacto">Contactenos</a>
             </li>
             <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+            <a className="nav-link" href="/Demo">Demo</a>
             </li>
         </ul>
+
         <br />
         <div className='cuadro1'>
         <ul>
@@ -62,7 +63,6 @@ function Card() {
                     <img id='imaaa' src={producto.imagenProducto} alt=""  width={"200"}/>
                     <br />
                     <button id="boton6" onClick={botonn}>Mas informacion</button>
-                    <button><i class="bi bi-bag-plus-fill"></i></button>
                 </li>
             )
         )}

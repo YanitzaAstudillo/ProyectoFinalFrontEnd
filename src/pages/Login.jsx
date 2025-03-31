@@ -4,7 +4,9 @@ import Login from '../componentes/LoginAces'
 
 function Login() {
   return (
-    <div>Login</div>
+    <div>
+
+    </div>
   )
 }
 

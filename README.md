@@ -1,12 +1,6 @@
-# React + Vite
+README PROYECTO FINAL FRONTEND
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+La pagina inicia con un diseño explicativo, con botones que redirigen a las diferentes paginas secunadrias, como lo son: Contacto, Galeria de fotos, y un Demo de los equipos disponibles.  La pagina de contacto muestra la misión y vision de la empresa, explicando un poco de su historia.  A su vez, contiene el cuadro del contacto, este dirige a mi correo personal con el programa email browser instalado en la terminal e importado en el componente ContactoUs. Esta misma pagina contiene un navbar que redirige a las diferentes paginas secundarias.
+La Galeria de fotos muestra el reflejo de lo que se agrega en la pag Admin, convirtiendola en una pagina dinamica modificada, agregada y eliminada en tiempo real. Adicional a la descripcion del producto, se muesta un boton de mas información para hacer un elemento interactivo con el usuario. Tambien posee un nav para redirigir a otras paginas.
+En el link del registro, el cliente puede accesar muy comoda y sencilla con un simple paso de agregar su nombre y correo, con el boton de enviar. Esta informacion se guarda en el Db Json. Una vez que se registra, puede entrar en el login y este a su vez lo redirige a la galeria para usuarios (en el caso de usuarios), en el caso del adminisitrador, puede entrar con un nombre y correo unico para él, con la exclusividad de entrar a una pagina privada.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
